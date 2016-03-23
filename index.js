@@ -1,3 +1,5 @@
+(function() {
+
 const Alea = require('alea');
 const FastSimplexNoise = require('fast-simplex-noise');
 const FastUniformNoise = require('fast-uniform-noise');
@@ -32,3 +34,5 @@ function indev(opts) {
 }
 
 module.exports = indev;
+
+})();
