@@ -1,0 +1,33 @@
+{
+  "name": "indev",
+  "version": "3.0.3",
+  "description": "Minecraft-style terrain generation seeded noise functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modulesio/indev.git"
+  },
+  "keywords": [
+    "minecraft",
+    "terrain",
+    "generation",
+    "seed",
+    "simplex",
+    "perlin",
+    "noise"
+  ],
+  "author": "a@modules.io",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/modulesio/indev/issues"
+  },
+  "homepage": "https://github.com/modulesio/indev#readme",
+  "dependencies": {
+    "alea": "0.0.9",
+    "fast-simplex-noise": "^2.1.1",
+    "fast-uniform-noise": "0.0.2"
+  }
+}
