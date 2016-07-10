@@ -7,8 +7,17 @@ const FastUniformNoise = require('fast-uniform-noise');
 function Indev(opts) {
   opts = opts || {};
   const seed = opts.seed;
+  const random = opts.random;
 
-  this._random = seed !== undefined ? new Alea(seed) : Math.random;
+  this._random = (() => {
+    if (random !== undefined) {
+      return random;
+    } else if (seed !== undefined) {
+      return new Alea(seed);
+    } else {
+      return Math.random;
+    }
+  })();
 }
 Indev.prototype = {
   simplex: function(opts) {
