@@ -15,6 +15,6 @@ module.exports = {
     rollupPluginJson(),
   ],
   moduleName: 'indev',
-  format: 'iife',
+  format: 'cjs',
   useStrict: false,
 };
