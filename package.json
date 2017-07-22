@@ -2,7 +2,7 @@
   "name": "indev",
   "version": "3.0.13",
   "description": "Minecraft-style terrain generation seeded noise functions",
-  "main": "indev.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
