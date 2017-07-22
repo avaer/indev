@@ -26,9 +26,9 @@
   },
   "homepage": "https://github.com/modulesio/indev#readme",
   "dependencies": {
-    "alea": "",
+    "alea-zeo": "0.0.1",
     "fast-simplex-noise": "2.0.0",
-    "fast-uniform-noise": ""
+    "fast-uniform-noise": "0.0.4"
   },
   "devDependencies": {
     "rollup": "^0.41.6",

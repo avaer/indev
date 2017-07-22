@@ -1,6 +1,6 @@
 (function() {
 
-const Alea = require('alea');
+const Alea = require('alea-zeo');
 const FastSimplexNoise = require('fast-simplex-noise');
 const FastUniformNoise = require('fast-uniform-noise');
 
