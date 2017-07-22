@@ -1,6 +1,6 @@
 {
   "name": "indev",
-  "version": "3.0.11",
+  "version": "3.0.12",
   "description": "Minecraft-style terrain generation seeded noise functions",
   "main": "indev.js",
   "scripts": {
