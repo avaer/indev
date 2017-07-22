@@ -14,7 +14,7 @@ module.exports = {
     rollupPluginCommonJs(),
     rollupPluginJson(),
   ],
-  moduleName: 'creaturejs',
+  moduleName: 'indev',
   format: 'iife',
   useStrict: false,
 };
