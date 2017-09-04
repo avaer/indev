@@ -1283,7 +1283,7 @@ const api = {
   SEED: 'seed',
   BUCKETS: 256,
   SAMPLE_SCALE: 1e6,
-  SAMPLE_SIZE: 1e8,
+  SAMPLE_SIZE: 1e9,
   MIN_PRECOMPUTED_OCTAVES: 1,
   MAX_PRECOMPUTED_OCTAVES: 8,
 };
@@ -1314,20 +1314,18 @@ Histogram.prototype = {
     return v * this._buckets.length;
   },
   getBucketIndex: function(v) {
-    return Math.floor(this.getBucket(v));
+    return Math.min(Math.max(Math.floor(this.getBucket(v)), 0), this._buckets.length - 1);
   },
   getBucketResidual: function(v) {
     return this.getBucket(v) % 1;
   },
   add: function(v) {
-    const bucketIndex = this.getBucketIndex(v);
-    this._buckets[bucketIndex]++;
+    this._buckets[this.getBucketIndex(v)]++;
   },
   total: function() {
     let result = 0;
     for (let i = 0, l = this._buckets.length; i < l; i++) {
-      const bucketValue = this._buckets[i];
-      result += bucketValue;
+      result += this._buckets[i];
     }
     return result;
   },
@@ -1385,7 +1383,7 @@ var histograms$1 = Object.freeze({
 
 var require$$4 = ( histograms$1 && histograms ) || histograms$1;
 
-var index$2 = createCommonjsModule(function (module) {
+var fastUniformNoise = createCommonjsModule(function (module) {
 (function() {
 "use strict";
 
@@ -1475,7 +1473,7 @@ Indev.prototype = {
     opts.max = opts.max || 1;
     opts.random = this._random;
 
-    return new index$2(opts);
+    return new fastUniformNoise(opts);
   },
 };
 
@@ -1483,6 +1481,6 @@ function indev(opts) {
   return new Indev(opts);
 }
 
-var index = indev;
+var indev_1 = indev;
 
-module.exports = index;
+module.exports = indev_1;
